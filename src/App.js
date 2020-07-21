@@ -19,6 +19,16 @@ function App() {
                 main: '#f39a1d',
             },
         },
+        share: {
+            sectionTitle: {
+                // fontFamily: 'Dr Sugiyama',
+                fontWeight: 'bold',
+                letterSpacing: '4px',
+                fontSize: '48px',
+                textAlign: 'center',
+                marginBottom: '16px',
+            },
+        },
     });
 
     const toggleTheme = (event) => {

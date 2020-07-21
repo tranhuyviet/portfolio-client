@@ -11,45 +11,48 @@ const Banner = () => {
 
     return (
         <Paper component="section" elevation={0} square className={classes.bannerContainer}>
-            <Grid container className={classes.contentContainer}>
+            <Grid container className={classes.contentContainer} alignItems="center">
                 <Grid
                     item
                     xs={6}
                     container
-                    justify="flex-end"
+                    justify="center"
                     alignItems="center"
                     style={{ paddingRight: theme.spacing(4) }}
                 >
                     <Avatar
-                        src="https://res.cloudinary.com/dzaxf70c4/image/upload/ar_1:1,bo_5px_solid_rgb:f39a1d,c_fill,g_auto,r_max,w_1000/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
+                        // src="https://res.cloudinary.com/dzaxf70c4/image/upload/ar_1:1,bo_5px_solid_rgb:f39a1d,c_fill,g_auto,r_max,w_1000/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
+                        // src="https://res.cloudinary.com/dzaxf70c4/image/upload/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
+                        src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600,w_500/v1595245143/bg_home_mtij02.png"
                         alt="avatar"
-                        style={{ height: 200, width: 200 }}
+                        variant="square"
+                        style={{ height: 600, width: 500 }}
                     />
                 </Grid>
 
                 <Grid item xs={6}>
-                    <Typography variant="h4">
+                    <Typography variant="h2">
                         Hi, I am <span style={{ fontWeight: 'bold' }}>Viet Tran</span>
                     </Typography>
                     <Typography
-                        variant="h5"
+                        variant="h4"
                         color="primary"
-                        style={{ textDecoration: 'underline', marginBottom: theme.spacing(2) }}
+                        style={{ textDecoration: 'underline', marginBottom: theme.spacing(3) }}
                     >
                         <Typed strings={['Full-Stack Web Diveloper']} typeSpeed={60} loop />
                     </Typography>
-                    <Typography variant="subtitle1">
+                    <Typography variant="h6" style={{ marginBottom: theme.spacing(3) }}>
                         I am currently a fourth year student at the Metropolia University of Applied
                         Sciences. Although my major is Mobile Solution, I have a passion for the
                         web-devenopment.
                     </Typography>
-                    <Typography variant="subtitle1">
+                    <Typography variant="h6">
                         I have over 10 years of experience working in the information technology
                         environment in Vietnam.
                     </Typography>
                     <Button
                         variant="outlined"
-                        style={{ marginTop: theme.spacing(2) }}
+                        style={{ marginTop: theme.spacing(3) }}
                         color="primary"
                     >
                         Download CV

@@ -36,7 +36,7 @@ const TopBar = ({ darkTheme, toggleTheme }) => {
     };
 
     return (
-        <Paper className={classes.topbarContainer} elevation={1} square>
+        <Paper className={classes.topbarContainer} elevation={2} square>
             <Box className={classes.changeTheme}>
                 <Tooltip title={darkTheme ? 'Change to Light Theme' : 'Change to Dark Theme'} arrow>
                     <FormControlLabel
