@@ -14,7 +14,7 @@ const Skills = () => {
     function LinearProgressWithLabel(props) {
         return (
             <Box component="div" style={{ marginBottom: theme.spacing(3) }}>
-                <Typography variant="h5" gutterBottom style={{ letterSpacing: 4 }}>
+                <Typography variant="h6" gutterBottom style={{ letterSpacing: 4 }}>
                     {props.text}
                 </Typography>
                 <Box display="flex" alignItems="center">
@@ -32,10 +32,10 @@ const Skills = () => {
     }
 
     return (
-        <Paper component="section" className={classes.skillsContainer} square elevation={0}>
+        <Paper component="section" className={classes.skillsContainer} square elevation={2}>
             <Zoom>
-                <Typography className={classes.sectionTitle}>
-                    My <span style={{ color: theme.palette.primary.main }}>Skills</span>
+                <Typography style={{ ...theme.share.sectionTitle }}>
+                    <span style={{ color: theme.palette.primary.main }}>S</span>kills
                 </Typography>
             </Zoom>
             <Grid container spacing={2}>
@@ -85,16 +85,16 @@ const Skills = () => {
                 </Grid>
                 <Grid item xs={6}>
                     <Paper style={{ height: '100%' }} square elevation={0}>
-                        <LinearProgressWithLabel text="HTML/CSS/JSS/SASS" value="90" />
-                        <LinearProgressWithLabel text="JAVASCRIPT" value="92" />
-                        <LinearProgressWithLabel text="REACT: REDUX, CONTEXT API" value="95" />
+                        <LinearProgressWithLabel text="HTML/CSS/JSS/SASS" value={90} />
+                        <LinearProgressWithLabel text="JAVASCRIPT" value={92} />
+                        <LinearProgressWithLabel text="REACT: REDUX, CONTEXT API" value={95} />
                         <LinearProgressWithLabel
                             text="UI FRAMEWORK: MATERIAL UI, SEMANTIC"
-                            value="90"
+                            value={90}
                         />
-                        <LinearProgressWithLabel text="APOLLO CLIENT, APOLLO SERVER" value="95" />
-                        <LinearProgressWithLabel text="NODEJS: REST API, GRAPHQL" value="95" />
-                        <LinearProgressWithLabel text="MONGODB" value="90" />
+                        <LinearProgressWithLabel text="APOLLO CLIENT, APOLLO SERVER" value={95} />
+                        <LinearProgressWithLabel text="NODEJS: REST API, GRAPHQL" value={95} />
+                        <LinearProgressWithLabel text="MONGODB" value={90} />
                     </Paper>
                 </Grid>
             </Grid>
