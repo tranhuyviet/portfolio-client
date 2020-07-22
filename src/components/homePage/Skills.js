@@ -13,21 +13,27 @@ const Skills = () => {
 
     function LinearProgressWithLabel(props) {
         return (
-            <Box component="div" style={{ marginBottom: theme.spacing(3) }}>
-                <Typography variant="h6" gutterBottom style={{ letterSpacing: 4 }}>
-                    {props.text}
-                </Typography>
-                <Box display="flex" alignItems="center">
-                    <Box width="100%" mr={1}>
-                        <LinearProgress variant="determinate" {...props} style={{ height: 30 }} />
-                    </Box>
-                    <Box minWidth={35}>
-                        <Typography variant="body2" color="textSecondary">{`${Math.round(
-                            props.value
-                        )}%`}</Typography>
+            <Zoom left>
+                <Box component="div" style={{ marginBottom: theme.spacing(3) }}>
+                    <Typography variant="h6" gutterBottom style={{ letterSpacing: 4 }}>
+                        {props.text}
+                    </Typography>
+                    <Box display="flex" alignItems="center">
+                        <Box width="100%" mr={1}>
+                            <LinearProgress
+                                variant="determinate"
+                                {...props}
+                                style={{ height: 30 }}
+                            />
+                        </Box>
+                        <Box minWidth={35}>
+                            <Typography variant="body2" color="textSecondary">{`${Math.round(
+                                props.value
+                            )}%`}</Typography>
+                        </Box>
                     </Box>
                 </Box>
-            </Box>
+            </Zoom>
         );
     }
 

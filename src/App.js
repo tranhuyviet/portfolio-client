@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, useTheme } from '@material-ui/core/styles';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -27,6 +27,11 @@ function App() {
                 fontSize: '48px',
                 textAlign: 'center',
                 marginBottom: '16px',
+            },
+            timelineDot: {
+                fontSize: '40px',
+                boxShadow: useTheme().shadows[3],
+                borderRadius: '50%',
             },
         },
     });
