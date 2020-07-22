@@ -15,6 +15,7 @@ import { useTheme } from '@material-ui/core/styles';
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
+import SectionTitle from '../shared/SectionTitle';
 
 const Educations = () => {
     const classes = useStyles();
@@ -47,11 +48,7 @@ const Educations = () => {
 
     return (
         <Paper component="section" square elevation={0}>
-            <Zoom>
-                <Typography style={{ ...theme.share.sectionTitle }}>
-                    <span style={{ color: theme.palette.primary.main }}>E</span>ducation
-                </Typography>
-            </Zoom>
+            <SectionTitle title="Education" />
             <Grid container justify="center">
                 <Grid item xs={8}>
                     <Timeline align="alternate">

@@ -5,7 +5,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import { useTheme } from '@material-ui/core/styles';
 import { Zoom, Roll } from 'react-reveal';
 import Spin from 'react-reveal/Spin';
-import SkillSVG from '../../assets/images/sprite_60fps.svg';
+import SectionTitle from '../shared/SectionTitle';
 
 const Skills = () => {
     const classes = useStyles();
@@ -33,11 +33,7 @@ const Skills = () => {
 
     return (
         <Paper component="section" className={classes.skillsContainer} square elevation={2}>
-            <Zoom>
-                <Typography style={{ ...theme.share.sectionTitle }}>
-                    <span style={{ color: theme.palette.primary.main }}>S</span>kills
-                </Typography>
-            </Zoom>
+            <SectionTitle title="Skills" />
             <Grid container spacing={2}>
                 <Grid item xs={6} container direction="column">
                     <Grid item container justify="center">
