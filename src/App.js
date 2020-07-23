@@ -8,6 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import TopBar from './components/bars/TopBar';
 import NavBar from './components/bars/NavBar';
 import HomePage from './components/pages/HomePage';
+import Footer from './components/bars/Footer';
 
 function App() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -48,6 +49,7 @@ function App() {
                 <TopBar darkTheme={isDarkTheme} toggleTheme={toggleTheme} />
                 <NavBar />
                 <Route exact path="/" component={HomePage} />
+                <Footer />
             </BrowserRouter>
         </ThemeProvider>
     );

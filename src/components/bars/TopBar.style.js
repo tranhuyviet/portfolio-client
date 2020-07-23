@@ -7,6 +7,10 @@ export const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
+        // background:
+        //     theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600'],
+        // color:
+        //     theme.palette.type === 'dark' ? theme.palette.common.black : theme.palette.common.white,
     },
     changeTheme: {
         // borderRight: `1px solid ${theme.palette.grey[500]}`,

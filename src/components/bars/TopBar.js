@@ -52,7 +52,7 @@ const TopBar = ({ darkTheme, toggleTheme }) => {
                     />
                 </Tooltip>
             </Box>
-            <Divider orientation="vertical" flexItem />
+            {/* <Divider orientation="vertical" flexItem />
             <Box className={classes.language}>
                 <Tooltip title="Change language" arrow>
                     <Button
@@ -73,11 +73,11 @@ const TopBar = ({ darkTheme, toggleTheme }) => {
                     <MenuItem onClick={menuLanguageItemClick}>English</MenuItem>
                     <MenuItem onClick={menuLanguageItemClick}>Suomi</MenuItem>
                 </Menu>
-            </Box>
-            <Divider orientation="vertical" flexItem />
+            </Box> */}
+            <Divider orientation="vertical" flexItem color="inherit" />
             <Box className={classes.login}>
                 <Tooltip title="Login" arrow>
-                    <Button startIcon={<PersonIcon />} className={classes.button}>
+                    <Button startIcon={<PersonIcon />} className={classes.button} color="inherit">
                         Login
                     </Button>
                 </Tooltip>

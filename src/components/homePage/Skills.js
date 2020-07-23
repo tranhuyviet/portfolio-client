@@ -41,7 +41,7 @@ const Skills = () => {
         <Paper component="section" className={classes.skillsContainer} square elevation={2}>
             <SectionTitle title="Skills" />
             <Grid container spacing={2}>
-                <Grid item xs={6} container direction="column">
+                <Grid item xs={6} container direction="column" justify="center" alignItems="center">
                     <Grid item container justify="center">
                         <Spin forever>
                             <SettingsIcon
@@ -84,6 +84,10 @@ const Skills = () => {
                             </Spin>
                         </Grid>
                     </Grid>
+                    {/* <Avatar
+                        src="https://i.dlpng.com/static/png/6597586_preview.png"
+                        style={{ height: 600, width: 600 }}
+                    /> */}
                 </Grid>
                 <Grid item xs={6}>
                     <Paper style={{ height: '100%' }} square elevation={0}>
