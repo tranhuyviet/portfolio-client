@@ -13,16 +13,24 @@ export const useStyles = makeStyles((theme) => ({
         //     theme.palette.type === 'dark' ? theme.palette.common.black : theme.palette.common.white,
     },
     changeTheme: {
-        // borderRight: `1px solid ${theme.palette.grey[500]}`,
+        marginLeft: 14,
     },
     language: {
         padding: '0 16px',
     },
     login: {
-        marginLeft: 16,
+        marginLeft: 10,
     },
     button: {
         textTransform: 'capitalize',
         fontSize: 16,
+    },
+    colorButton: {
+        height: 20,
+        maxWidth: 20,
+        borderRadius: '50%',
+    },
+    divider: {
+        // margin: '0 16px',
     },
 }));

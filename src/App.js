@@ -12,12 +12,23 @@ import Footer from './components/bars/Footer';
 
 function App() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [primaryColorIndex, setPrimaryColorIndex] = useState(0);
+    const primaryColors = ['#f39a1d', '#42a5f5', '#4db6ac', '#ba68c8'];
 
     const theme = createMuiTheme({
         palette: {
             type: isDarkTheme ? 'dark' : 'light',
             primary: {
-                main: '#f39a1d',
+                main: primaryColors[primaryColorIndex],
+                // main: '#f39a1d',
+                // main: '#42a5f5',
+                // main: '#4db6ac',
+
+                // main: '#b3d146',
+                // main: '#f57c00',
+                // main: '#ba68c8',
+                // main: '#5c6bc0',
+                // main: '#8d6e63',
             },
         },
         share: {
@@ -52,7 +63,13 @@ function App() {
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <CssBaseline />
-                <TopBar darkTheme={isDarkTheme} toggleTheme={toggleTheme} />
+                <TopBar
+                    darkTheme={isDarkTheme}
+                    toggleTheme={toggleTheme}
+                    primaryColorIndex={primaryColorIndex}
+                    setPrimaryColorIndex={setPrimaryColorIndex}
+                    primaryColors={primaryColors}
+                />
                 <NavBar />
                 <Route exact path="/" component={HomePage} />
                 <Footer />

@@ -4,8 +4,6 @@ export const useStyles = makeStyles((theme) => ({
     navContainer: {
         height: '68px',
         maxHeight: '68px',
-        // background:
-        //     'linear-gradient(90deg, rgba(216,211,210,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(216,211,210,1) 100%)',
     },
 
     menu: {
@@ -62,21 +60,16 @@ export const useStyles = makeStyles((theme) => ({
 
         fontSize: '46px',
         // color: '#F39A1D',
-        backgroundImage:
-            'linear-gradient(0deg, rgba(243,154,29,1) 0%, rgba(255,212,4,1) 50%, rgba(255,212,4,1) 70%, rgba(243,154,29,1) 100%)',
+        backgroundImage: `linear-gradient(-10deg, ${theme.palette.primary.main} 0%,${
+            theme.palette.primary.main
+        } 40%, ${
+            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
+        } 55%,${
+            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
+        }  58%,${theme.palette.primary.main} 75%,${theme.palette.primary.main} 100%)`,
+        backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         color: 'transparent',
-        // position: 'absolute',
-        // top: '-52px',
-        // left: '50%',
-
-        // borderRadius: '50%',
-        // height: '104px',
-        // width: '104px',
-        // zIndex: '19001',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
     },
     logoBackground: {
         position: 'absolute',
@@ -88,7 +81,6 @@ export const useStyles = makeStyles((theme) => ({
         background:
             theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['800'],
         borderRadius: '50%',
-        border: `2px solid ${theme.palette.common.white}`,
     },
     info: {
         ...theme.share.info,

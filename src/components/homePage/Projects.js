@@ -72,7 +72,7 @@ const Projects = () => {
 
                         <Button
                             variant="outlined"
-                            style={{ marginTop: theme.spacing(3) }}
+                            style={{ marginTop: theme.spacing(3), fontWeight: 'bold' }}
                             color="primary"
                         >
                             View Project

@@ -31,16 +31,22 @@ export const useStyles = makeStyles((theme) => ({
     logoText: {
         fontFamily: 'Dr Sugiyama',
         fontWeight: 'bold',
-        letterSpacing: '6px',
+        letterSpacing: '4px',
         padding: '5px 0',
 
         fontSize: '64px',
         // color: '#F39A1D',
-        backgroundImage:
-            'linear-gradient(0deg, rgba(243,154,29,1) 0%, rgba(255,212,4,1) 50%, rgba(255,212,4,1) 70%, rgba(243,154,29,1) 100%)',
+        backgroundImage: `linear-gradient(-10deg, ${theme.palette.primary.main} 0%,${
+            theme.palette.primary.main
+        } 40%, ${
+            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
+        } 55%,${
+            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
+        }  58%,${theme.palette.primary.main} 75%,${theme.palette.primary.main} 100%)`,
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         color: 'transparent',
+        // color: theme.palette.primary.light,
 
         height: 140,
         width: 140,
@@ -48,12 +54,12 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
 
-        // position: 'absolute',
-        // top: '50%',
-        // left: '50%',
         position: 'absolute',
-        zIndex: '19001',
-        top: '52%',
+        // top: '0',
+        // left: '50%',
+        // position: 'absolute',
+        // zIndex: '19001',
+        // top: '52%',
         // transform: 'translate(-50%,-50%)',
         // WebkitTransform: 'translate(-50%,-50%)',
         // MozTransform: 'translate(-50%,-50%)',
@@ -61,9 +67,9 @@ export const useStyles = makeStyles((theme) => ({
         // MsTransform: 'translate(-50%,-50%)',
     },
     logoBackground: {
-        position: 'absolute',
-        zIndex: 19000,
-        top: '52%',
+        // position: 'absolute',
+        //top: '0',
+        // zIndex: 19000,
         //position: 'absolute',
         //zIndex: '19000',
         //top: '50%',
@@ -78,7 +84,8 @@ export const useStyles = makeStyles((theme) => ({
         background:
             theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
         borderRadius: '50%',
-        border: `2px solid ${theme.palette.common.white}`,
+        // border: `2px solid ${theme.palette.primary.main}`,
+        boxShadow: theme.shadows[10],
     },
     copyright: {
         color:

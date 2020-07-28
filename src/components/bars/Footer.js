@@ -1,6 +1,9 @@
 import React from 'react';
 import { Paper, Typography, Grid } from '@material-ui/core';
 import { useStyles } from './Footer.style';
+
+import Pulse from 'react-reveal/Pulse';
+
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -27,10 +30,14 @@ const Footer = () => {
                     >{`© ${new Date().getFullYear()} Viet Tran.`}</Typography> */}
                 </Grid>
                 <Grid item xs={2} container justify="center" alignItems="center">
-                    <Typography variant="h2" className={classes.logoText}>
-                        Viet
-                    </Typography>
-                    <div className={classes.logoBackground} />
+                    <Pulse forever>
+                        <>
+                            <Typography variant="h2" className={classes.logoText}>
+                                Viet
+                            </Typography>
+                            <div className={classes.logoBackground} />
+                        </>
+                    </Pulse>
                 </Grid>
                 <Grid
                     item
