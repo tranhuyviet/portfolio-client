@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStyles } from './Skills.style';
-import { Typography, Paper, LinearProgress, Box, Grid, Avatar } from '@material-ui/core';
+import { Typography, Paper, LinearProgress, Box, Grid } from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { useTheme } from '@material-ui/core/styles';
 import { Zoom, Roll } from 'react-reveal';

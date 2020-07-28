@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStyles } from './Banner.style';
-import { Paper, Typography, Box, Avatar, Button, Grid } from '@material-ui/core';
+import { Paper, Typography, Avatar, Button, Grid } from '@material-ui/core';
 import Particles from 'react-particles-js';
 import { useTheme } from '@material-ui/core/styles';
 import Typed from 'react-typed';

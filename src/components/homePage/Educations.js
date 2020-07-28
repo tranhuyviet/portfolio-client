@@ -1,23 +1,17 @@
 import React from 'react';
 import { useStyles } from './Educations.style';
-import { Paper, Typography, Grid } from '@material-ui/core';
+import { Paper, Grid } from '@material-ui/core';
 
 import Timeline from '@material-ui/lab/Timeline';
 
-import { Zoom } from 'react-reveal';
-import { useTheme } from '@material-ui/core/styles';
-
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import SectionTitle from '../shared/SectionTitle';
 import TimelineItemRender from '../shared/TimelineItemRender';
 
 const Educations = () => {
     const classes = useStyles();
-    const theme = useTheme();
 
     return (
-        <Paper component="section" square elevation={0}>
+        <Paper component="section" square elevation={0} className={classes.educationContainer}>
             <SectionTitle title="Education" />
             <Grid container justify="center">
                 <Grid item xs={8}>

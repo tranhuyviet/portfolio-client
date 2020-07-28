@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '@material-ui/core/styles';
-import { Grid, Paper, Typography, TableBody } from '@material-ui/core';
+import { Grid, Paper, Typography } from '@material-ui/core';
 import SectionTitle from '../shared/SectionTitle';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItemRender from '../shared/TimelineItemRender';
@@ -8,7 +8,7 @@ import TimelineItemRender from '../shared/TimelineItemRender';
 const Experience = () => {
     const theme = useTheme();
     return (
-        <Paper component="section" square elevation={0}>
+        <Paper component="section" square elevation={0} style={{ paddingTop: theme.spacing(5) }}>
             <SectionTitle title="experience" />
             <Grid container justify="center">
                 <Grid item xs={8}>

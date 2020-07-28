@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
     footer: {
-        height: 400,
+        height: 420,
         position: 'relative',
         backgroundColor:
             theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['800'],
@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme) => ({
             left: '-250px',
             right: '-250px',
             top: 0,
-            height: 110,
+            height: 300,
             borderRadius: '100%',
             backgroundColor:
                 theme.palette.type === 'dark'
@@ -48,31 +48,59 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
 
+        // position: 'absolute',
+        // top: '50%',
+        // left: '50%',
         position: 'absolute',
-        top: '50%',
-        left: '50%',
         zIndex: '19001',
-        transform: 'translate(-50%,-50%)',
-        WebkitTransform: 'translate(-50%,-50%)',
-        MozTransform: 'translate(-50%,-50%)',
-        OTransform: 'translate(-50%,-50%)',
-        MsTransform: 'translate(-50%,-50%)',
+        top: '52%',
+        // transform: 'translate(-50%,-50%)',
+        // WebkitTransform: 'translate(-50%,-50%)',
+        // MozTransform: 'translate(-50%,-50%)',
+        // OTransform: 'translate(-50%,-50%)',
+        // MsTransform: 'translate(-50%,-50%)',
     },
     logoBackground: {
         position: 'absolute',
-        zIndex: '19000',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%,-50%)',
-        WebkitTransform: 'translate(-50%,-50%)',
-        MozTransform: 'translate(-50%,-50%)',
-        OTransform: 'translate(-50%,-50%)',
-        MsTransform: 'translate(-50%,-50%)',
+        zIndex: 19000,
+        top: '52%',
+        //position: 'absolute',
+        //zIndex: '19000',
+        //top: '50%',
+        //left: '50%',
+        // transform: 'translate(-50%,-50%)',
+        // WebkitTransform: 'translate(-50%,-50%)',
+        // MozTransform: 'translate(-50%,-50%)',
+        // OTransform: 'translate(-50%,-50%)',
+        // MsTransform: 'translate(-50%,-50%)',
         height: '140px',
         width: '140px',
         background:
             theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
         borderRadius: '50%',
         border: `2px solid ${theme.palette.common.white}`,
+    },
+    copyright: {
+        color:
+            theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
+    },
+    socialIconContainer: {
+        height: 570,
+    },
+    socialIcon: {
+        color:
+            theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
+        fontSize: '48px',
+        zIndex: 10,
+        margin: '0 16px',
+    },
+    info: {
+        ...theme.share.info,
+        color:
+            theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
+        marginBottom: theme.spacing(2),
+    },
+    icon: {
+        marginRight: theme.spacing(1),
     },
 }));

@@ -34,6 +34,12 @@ function App() {
                 boxShadow: useTheme().shadows[3],
                 borderRadius: '50%',
             },
+            info: {
+                display: 'flex',
+                alignItems: 'center',
+                margin: `0 16px`,
+                fontWeight: 'bold',
+            },
         },
     });
 

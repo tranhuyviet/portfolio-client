@@ -1,39 +1,26 @@
-import React, { useState } from 'react';
-import {
-    Box,
-    Switch,
-    Typography,
-    FormControlLabel,
-    IconButton,
-    Tooltip,
-    Paper,
-    Icon,
-    Button,
-    Divider,
-    Menu,
-    MenuItem,
-} from '@material-ui/core';
+import React from 'react';
+import { Box, Switch, FormControlLabel, Tooltip, Paper, Button, Divider } from '@material-ui/core';
 import { useStyles } from './TopBar.style';
 
 import PersonIcon from '@material-ui/icons/Person';
-import TranslateIcon from '@material-ui/icons/Translate';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+// import TranslateIcon from '@material-ui/icons/Translate';
+// import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const TopBar = ({ darkTheme, toggleTheme }) => {
     const classes = useStyles();
-    const [isMenuLanguageOpen, setIsMenuLanguageOpen] = useState(false);
+    // const [isMenuLanguageOpen, setIsMenuLanguageOpen] = useState(false);
 
-    const handleMenuLanguageClick = (event) => {
-        setIsMenuLanguageOpen(event.currentTarget);
-    };
+    // const handleMenuLanguageClick = (event) => {
+    //     setIsMenuLanguageOpen(event.currentTarget);
+    // };
 
-    const handleMenuLanguageClose = () => {
-        setIsMenuLanguageOpen(false);
-    };
+    // const handleMenuLanguageClose = () => {
+    //     setIsMenuLanguageOpen(false);
+    // };
 
-    const menuLanguageItemClick = () => {
-        handleMenuLanguageClose();
-    };
+    // const menuLanguageItemClick = () => {
+    //     handleMenuLanguageClose();
+    // };
 
     return (
         <Paper className={classes.topbarContainer} elevation={2} square>

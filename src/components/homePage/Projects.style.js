@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
         margin: '0 auto',
         // marginBottom: theme.spacing(3),
         padding: theme.spacing(3),
+        marginTop: theme.spacing(5),
     },
     projectImage: {
         width: '600px',

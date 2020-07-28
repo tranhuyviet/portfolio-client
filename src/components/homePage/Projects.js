@@ -8,7 +8,12 @@ const Projects = () => {
     const classes = useStyles();
     const theme = useTheme();
     return (
-        <Paper component="section" square elevation={0} style={{ padding: theme.spacing(3) }}>
+        <Paper
+            component="section"
+            square
+            elevation={0}
+            style={{ padding: theme.spacing(3), paddingTop: theme.spacing(5) }}
+        >
             <SectionTitle title="projects" />
             <Paper className={classes.projectCardContainer} elevation={4}>
                 <Grid container className={classes.projectCard}>
