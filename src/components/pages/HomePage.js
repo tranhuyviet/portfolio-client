@@ -3,6 +3,7 @@ import Banner from '../homePage/Banner';
 import Skills from '../homePage/Skills';
 import Educations from '../homePage/Educations';
 import Experience from '../homePage/Experience';
+import Projects from '../homePage/Projects';
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <Skills />
             <Educations />
             <Experience />
+            <Projects />
         </div>
     );
 };

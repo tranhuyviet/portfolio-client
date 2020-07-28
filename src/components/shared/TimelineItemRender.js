@@ -25,7 +25,7 @@ const TimelineItemRender = (props) => {
             <TimelineSeparator>
                 {/* <TimelineDot> */}
                 {props.starsIcon ? (
-                    <StarsIcon style={{ ...theme.share.timelineDot }} />
+                    <StarsIcon style={{ ...theme.share.timelineDot }} color="primary" />
                 ) : (
                     <RadioButtonCheckedIcon
                         style={{
