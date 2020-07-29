@@ -8,6 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import TopBar from './components/bars/TopBar';
 import NavBar from './components/bars/NavBar';
 import HomePage from './components/pages/HomePage';
+import ContactPage from './components/pages/ContactPage';
 import Footer from './components/bars/Footer';
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
                 />
                 <NavBar />
                 <Route exact path="/" component={HomePage} />
+                <Route exact path="/contact" component={ContactPage} />
                 <Footer />
             </BrowserRouter>
         </ThemeProvider>
