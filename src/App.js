@@ -73,7 +73,7 @@ function App() {
                 />
                 <NavBar />
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/contact" component={ContactPage} />
+                <Route exact path="/contact" render={(props) => <ContactPage {...props} />} />
                 <Footer />
             </BrowserRouter>
         </ThemeProvider>

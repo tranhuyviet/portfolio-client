@@ -4,7 +4,7 @@ import SectionTitle from '../shared/SectionTitle';
 import { useTheme } from '@material-ui/core/styles';
 import ContactForm from '../forms/ContactForm';
 
-const ContactPage = () => {
+const ContactPage = ({ isDarkTheme }) => {
     const theme = useTheme();
     return (
         <Paper

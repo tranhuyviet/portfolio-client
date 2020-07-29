@@ -14,6 +14,7 @@ const confirmPassword = Yup.string()
 const message = Yup.string()
     .min(5, 'Message must be at least 5 characters')
     .required('Message cannot be empty');
+const recaptcha = Yup.string().required('Recaptcha verification is required');
 
 export const signupSchema = Yup.object({
     name,
@@ -31,4 +32,5 @@ export const contactSchema = Yup.object({
     name,
     email,
     message,
+    recaptcha,
 });
