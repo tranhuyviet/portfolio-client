@@ -1,10 +1,10 @@
 import React from 'react';
-import { Paper, Typography, Grid } from '@material-ui/core';
+import { Paper, Grid } from '@material-ui/core';
 import SectionTitle from '../shared/SectionTitle';
 import { useTheme } from '@material-ui/core/styles';
 import ContactForm from '../forms/ContactForm';
 
-const ContactPage = ({ isDarkTheme }) => {
+const ContactPage = () => {
     const theme = useTheme();
     return (
         <Paper

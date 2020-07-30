@@ -28,6 +28,7 @@ export const useStyles = makeStyles((theme) => ({
                     : theme.palette.grey['800'],
         },
         [theme.breakpoints.down('xs')]: {
+            marginTop: theme.spacing(5),
             '&:before': {
                 display: 'none',
             },

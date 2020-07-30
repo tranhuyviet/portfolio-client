@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 
 import { Grid, Paper, Typography, useMediaQuery } from '@material-ui/core';
 import SectionTitle from '../shared/SectionTitle';

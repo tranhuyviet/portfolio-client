@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Paper, TextField, Button, CircularProgress, Grid, Snackbar } from '@material-ui/core';
+import { Paper, TextField, Button, Grid, Snackbar } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import { useFormik } from 'formik';
 import { useTheme } from '@material-ui/core/styles';
@@ -27,10 +27,10 @@ const ContactForm = () => {
         handleSubmit,
         handleBlur,
         errors,
-        setErrors,
-        //isValid,
-        setValues,
-        touched,
+        // setErrors,
+        // isValid,
+        // setValues,
+        // touched,
         setFieldValue,
     } = useFormik({
         initialValues,
