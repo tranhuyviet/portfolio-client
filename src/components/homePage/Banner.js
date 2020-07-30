@@ -14,11 +14,12 @@ const Banner = () => {
             <Grid container className={classes.contentContainer} alignItems="center">
                 <Grid
                     item
-                    xs={6}
+                    xs={12}
+                    sm={5}
                     container
                     justify="center"
                     alignItems="center"
-                    style={{ paddingRight: theme.spacing(4) }}
+                    // style={{ paddingRight: theme.spacing(4) }}
                 >
                     <Avatar
                         // src="https://res.cloudinary.com/dzaxf70c4/image/upload/ar_1:1,bo_5px_solid_rgb:f39a1d,c_fill,g_auto,r_max,w_1000/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
@@ -26,33 +27,38 @@ const Banner = () => {
                         src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600,w_500/v1595245143/bg_home_mtij02.png"
                         alt="avatar"
                         variant="square"
-                        style={{ height: 600, width: 500 }}
+                        className={classes.avatar}
                     />
                 </Grid>
 
-                <Grid item xs={6}>
-                    <Typography variant="h2">
+                <Grid item xs={12} sm={7} className={classes.infoContainer}>
+                    <Typography variant="h2" className={classes.title}>
                         Hi, I am <span style={{ fontWeight: 'bold' }}>Viet Tran</span>
                     </Typography>
                     <Typography
                         variant="h4"
                         color="primary"
-                        style={{ textDecoration: 'underline', marginBottom: theme.spacing(3) }}
+                        //style={{ textDecoration: 'underline', //marginBottom: theme.spacing(3) }}
+                        className={classes.subtitle}
                     >
                         <Typed strings={['Full-Stack Web Diveloper']} typeSpeed={60} loop />
                     </Typography>
-                    <Typography variant="h6" style={{ marginBottom: theme.spacing(3) }}>
+                    <Typography
+                        variant="h6"
+                        // style={{ marginBottom: theme.spacing(3) }}
+                        className={classes.description}
+                    >
                         I am currently a fourth year student at the Metropolia University of Applied
                         Sciences. Although my major is Mobile Solution, I have a passion for the
                         web-devenopment.
                     </Typography>
-                    <Typography variant="h6">
+                    <Typography variant="h6" className={classes.description}>
                         I have over 10 years of experience working in the information technology
                         environment in Vietnam.
                     </Typography>
                     <Button
                         variant="outlined"
-                        style={{ marginTop: theme.spacing(3), fontWeight: 'bold' }}
+                        style={{ fontWeight: 'bold', letterSpacing: 1 }}
                         color="primary"
                     >
                         Download CV

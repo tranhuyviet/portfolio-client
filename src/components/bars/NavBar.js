@@ -25,27 +25,15 @@ const NavBar = () => {
     }, [tabValue, pathName, setTabValue]);
 
     return (
-        <Paper components="nav" className={classes.navContainer} square elevation={6}>
-            {/* <AppBar position="static" className={classes.appbar} color="transparent">
-                <Toolbar> */}
+        <Paper
+            components="nav"
+            className={classes.navContainer}
+            square
+            elevation={6}
+            style={{ marginTop: '40px' }}
+        >
             <Grid container className={classes.menu}>
-                <Grid item xs={5} container alignItems="center" justify="center">
-                    {/* <Typography
-                        variant="h6"
-                        className={pathName === '/' ? classes.active : classes.menuItem}
-                        component={Link}
-                        to="/"
-                    >
-                        Home
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        className={classes.menuItem}
-                        component={Link}
-                        to="/contact"
-                    >
-                        Contact
-                    </Typography> */}
+                <Grid item xs={8} sm={5} container alignItems="center" justify="center">
                     <Tabs
                         value={tabValue}
                         onChange={(event, newValue) => setTabValue(newValue)}
@@ -67,13 +55,20 @@ const NavBar = () => {
                         />
                     </Tabs>
                 </Grid>
-                <Grid item xs={2} container justify="center" style={{ position: 'relative' }}>
+                <Grid
+                    item
+                    xs={4}
+                    sm={2}
+                    container
+                    justify="center"
+                    style={{ position: 'relative' }}
+                >
                     <Typography variant="h2" className={classes.logoText}>
                         Viet
                     </Typography>
                     {/* <div className={classes.logoBackground}></div> */}
                 </Grid>
-                <Grid item xs={5} container justify="center" alignItems="center">
+                <Grid item sm={5} container justify="center" alignItems="center">
                     <Typography variant="subtitle1" className={classes.info}>
                         <PhoneIcon color="primary" fontSize="large" className={classes.icon} />
                         +358 45 105 3344
@@ -84,8 +79,6 @@ const NavBar = () => {
                     </Typography>
                 </Grid>
             </Grid>
-            {/* </Toolbar>
-            </AppBar> */}
         </Paper>
     );
 };

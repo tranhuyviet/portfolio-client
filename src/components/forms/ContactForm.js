@@ -47,7 +47,7 @@ const ContactForm = () => {
     }
 
     return (
-        <Paper style={{ padding: theme.spacing(3), maxWidth: 700 }} elevation={3}>
+        <Paper style={{ padding: theme.spacing(2), maxWidth: 700 }} elevation={3}>
             <form noValidate onSubmit={handleSubmit}>
                 <TextField
                     type="text"
@@ -62,7 +62,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={errors.name}
-                    style={{ marginBottom: theme.spacing(3) }}
+                    style={{ marginBottom: theme.spacing(2) }}
                 />
                 <TextField
                     type="email"
@@ -77,7 +77,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={errors.email}
-                    style={{ marginBottom: theme.spacing(3) }}
+                    style={{ marginBottom: theme.spacing(2) }}
                 />
                 <TextField
                     type="text"
@@ -94,7 +94,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={errors.message}
-                    style={{ marginBottom: theme.spacing(3) }}
+                    style={{ marginBottom: theme.spacing(2) }}
                 />
                 {/* <div
                     style={{
@@ -104,7 +104,14 @@ const ContactForm = () => {
                     }}
                 > */}
                 <Grid container justify="space-between" alignItems="center">
-                    <Grid item xs={8} container direction="column">
+                    <Grid
+                        item
+                        xs={12}
+                        sm={8}
+                        container
+                        direction="column"
+                        style={{ marginBottom: theme.spacing(2) }}
+                    >
                         <ReCAPTCHA
                             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                             onChange={(value) => setFieldValue('recaptcha', value)}
@@ -119,8 +126,13 @@ const ContactForm = () => {
                     <Button
                         type="submit"
                         color="primary"
-                        variant="outlined"
-                        style={{ fontWeight: 'bold' }}
+                        variant="contained"
+                        style={{
+                            fontWeight: 'bold',
+                            color: theme.palette.common.white,
+                            letterSpacing: 1,
+                        }}
+                        fullWidth
                     >
                         Send
                     </Button>

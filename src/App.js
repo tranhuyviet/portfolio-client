@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme, useTheme } from '@material-ui/core/styles';
+import { Paper } from '@material-ui/core';
+import { createMuiTheme, useTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -46,6 +46,7 @@ function App() {
                 boxShadow: useTheme().shadows[3],
                 borderRadius: '50%',
             },
+
             info: {
                 display: 'flex',
                 alignItems: 'center',
@@ -64,17 +65,19 @@ function App() {
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <CssBaseline />
-                <TopBar
-                    darkTheme={isDarkTheme}
-                    toggleTheme={toggleTheme}
-                    primaryColorIndex={primaryColorIndex}
-                    setPrimaryColorIndex={setPrimaryColorIndex}
-                    primaryColors={primaryColors}
-                />
-                <NavBar />
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/contact" render={(props) => <ContactPage {...props} />} />
-                <Footer />
+                <Paper elevation={0} square>
+                    <TopBar
+                        darkTheme={isDarkTheme}
+                        toggleTheme={toggleTheme}
+                        primaryColorIndex={primaryColorIndex}
+                        setPrimaryColorIndex={setPrimaryColorIndex}
+                        primaryColors={primaryColors}
+                    />
+                    <NavBar />
+                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/contact" render={(props) => <ContactPage {...props} />} />
+                    <Footer />
+                </Paper>
             </BrowserRouter>
         </ThemeProvider>
     );

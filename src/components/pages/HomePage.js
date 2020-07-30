@@ -12,7 +12,7 @@ const HomePage = () => {
             <Skills />
             <Educations />
             <Experience />
-            <Projects />
+            {/* <Projects /> */}
         </div>
     );
 };

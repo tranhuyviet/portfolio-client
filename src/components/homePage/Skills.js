@@ -14,22 +14,24 @@ const Skills = () => {
     function LinearProgressWithLabel(props) {
         return (
             <Zoom left>
-                <Box component="div" style={{ marginBottom: theme.spacing(3) }}>
-                    <Typography variant="h6" gutterBottom style={{ letterSpacing: 4 }}>
+                <Box component="div" className={classes.skillItemContainer}>
+                    <Typography variant="h6" gutterBottom className={classes.skillItemText}>
                         {props.text}
                     </Typography>
                     <Box display="flex" alignItems="center">
-                        <Box width="100%" mr={1}>
+                        <Box width="100%">
                             <LinearProgress
                                 variant="determinate"
                                 {...props}
-                                style={{ height: 30 }}
+                                className={classes.skillItemBar}
                             />
                         </Box>
                         <Box minWidth={35}>
-                            <Typography variant="body2" color="textSecondary">{`${Math.round(
-                                props.value
-                            )}%`}</Typography>
+                            <Typography
+                                variant="body2"
+                                color="textSecondary"
+                                style={{ marginLeft: theme.spacing(1) }}
+                            >{`${Math.round(props.value)}%`}</Typography>
                         </Box>
                     </Box>
                 </Box>
@@ -38,49 +40,30 @@ const Skills = () => {
     }
 
     return (
-        <Paper component="section" className={classes.skillsContainer} square elevation={2}>
+        <Paper
+            component="section"
+            className={classes.skillsContainer}
+            square
+            elevation={0}
+            style={{ marginTop: theme.spacing(5) }}
+        >
             <SectionTitle title="Skills" />
-            <Grid container spacing={2}>
-                <Grid item xs={6} container direction="column" justify="center" alignItems="center">
+            <Grid container spacing={1}>
+                <Grid item sm={6} container direction="column" justify="center" alignItems="center">
                     <Grid item container justify="center">
                         <Spin forever>
-                            <SettingsIcon
-                                style={{
-                                    fontSize: 150,
-                                    color:
-                                        theme.palette.type === 'dark'
-                                            ? theme.palette.common.white
-                                            : theme.palette.grey['500'],
-                                }}
-                            />
+                            <SettingsIcon className={classes.icon1} />
                         </Spin>
                     </Grid>
-                    <Grid item container justify="flex-end">
+                    <Grid item container justify="center">
                         <Grid item>
                             <Roll forever>
-                                <SettingsIcon
-                                    style={{
-                                        fontSize: 250,
-                                        // color:
-                                        //     theme.palette.type === 'dark'
-                                        //         ? theme.palette.common.white
-                                        //         : theme.palette.grey['500'],
-                                    }}
-                                    color="primary"
-                                />
+                                <SettingsIcon color="primary" className={classes.icon2} />
                             </Roll>
                         </Grid>
                         <Grid item>
                             <Spin forever>
-                                <SettingsIcon
-                                    style={{
-                                        fontSize: 350,
-                                        color:
-                                            theme.palette.type === 'dark'
-                                                ? theme.palette.common.white
-                                                : theme.palette.grey['500'],
-                                    }}
-                                />
+                                <SettingsIcon className={classes.icon3} />
                             </Spin>
                         </Grid>
                     </Grid>
@@ -89,7 +72,12 @@ const Skills = () => {
                         style={{ height: 600, width: 600 }}
                     /> */}
                 </Grid>
-                <Grid item xs={6}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ paddingLeft: theme.spacing(2), paddingRight: theme.spacing(2) }}
+                >
                     <Paper style={{ height: '100%' }} square elevation={0}>
                         <LinearProgressWithLabel text="HTML/CSS/JSS/SASS" value={90} />
                         <LinearProgressWithLabel text="JAVASCRIPT" value={92} />

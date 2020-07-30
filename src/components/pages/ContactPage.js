@@ -13,11 +13,7 @@ const ContactPage = ({ isDarkTheme }) => {
             style={{ paddingTop: theme.spacing(5), minHeight: 'calc(100vh - 40px - 65px - 422px)' }}
         >
             <SectionTitle title="Contact" />
-            <Grid
-                container
-                justify="center"
-                style={{ paddingTop: theme.spacing(3), paddingBottom: theme.spacing(3) }}
-            >
+            <Grid container justify="center" style={{ padding: '24px' }}>
                 <ContactForm />
             </Grid>
         </Paper>

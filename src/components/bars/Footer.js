@@ -12,10 +12,20 @@ import EmailIcon from '@material-ui/icons/Email';
 
 const Footer = () => {
     const classes = useStyles();
+
     return (
-        <Paper className={classes.footer} component="footer" elevation={0}>
-            <Grid container>
-                <Grid item xs={5} container justify="center" alignItems="center" direction="column">
+        <Paper className={classes.footer} component="footer" elevation={0} square>
+            <Grid container className={classes.footerContainer}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={5}
+                    container
+                    justify="center"
+                    alignItems="center"
+                    direction="column"
+                    className={classes.infoContainer}
+                >
                     <Typography variant="subtitle1" className={classes.info}>
                         <PhoneIcon color="primary" fontSize="large" className={classes.icon} />
                         +358 45 105 3344
@@ -29,7 +39,15 @@ const Footer = () => {
                         className={classes.copyright}
                     >{`© ${new Date().getFullYear()} Viet Tran.`}</Typography> */}
                 </Grid>
-                <Grid item xs={2} container justify="center" alignItems="center">
+                <Grid
+                    item
+                    xs={12}
+                    sm={2}
+                    container
+                    justify="center"
+                    alignItems="center"
+                    className={classes.logoContainer}
+                >
                     <Pulse forever>
                         <>
                             <Typography variant="h2" className={classes.logoText}>
@@ -41,7 +59,8 @@ const Footer = () => {
                 </Grid>
                 <Grid
                     item
-                    xs={5}
+                    xs={12}
+                    sm={5}
                     container
                     justify="center"
                     alignItems="center"

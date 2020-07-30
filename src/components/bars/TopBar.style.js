@@ -7,6 +7,11 @@ export const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
+        position: 'fixed',
+        zIndex: '1000',
+        width: '100%',
+        top: 0,
+        opacity: 1,
         // background:
         //     theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600'],
         // color:

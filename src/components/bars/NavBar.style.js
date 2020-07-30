@@ -9,46 +9,7 @@ export const useStyles = makeStyles((theme) => ({
     menu: {
         boxShadow: theme.shadows[1],
     },
-    menuItem: {
-        marginLeft: theme.spacing(2),
-        marginRight: theme.spacing(2),
-        fontWeight: 'bold',
-        position: 'relative',
-        color:
-            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.common.black,
-        textDecoration: 'none',
-        transition: 'all 0.3s',
-        '&:visited, &:link': {},
-        '&:hover': {
-            color: theme.palette.primary.main,
-            '&:before': {
-                content: '""',
-                position: 'absolute',
-                backgroundColor: theme.palette.primary.main,
-                left: '20%',
-                right: '20%',
-                height: '2px',
-                bottom: 0,
-            },
-        },
-    },
-    active: {
-        color: theme.palette.primary.main,
 
-        '&:before': {
-            content: '""',
-            position: 'absolute',
-            backgroundColor: theme.palette.primary.main,
-            left: '20%',
-            right: '20%',
-            height: '2px',
-            bottom: 0,
-        },
-    },
-    menuContainer: {
-        display: 'flex',
-        alignItems: 'center',
-    },
     logoContainer: {
         display: 'flex',
     },
@@ -84,6 +45,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     info: {
         ...theme.share.info,
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
     },
     icon: {
         marginRight: theme.spacing(1),
@@ -94,6 +58,9 @@ export const useStyles = makeStyles((theme) => ({
         minWidth: 20,
         letterSpacing: 2,
         fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '16px',
+        },
     },
     tabSelected: {
         color: theme.palette.primary.main,

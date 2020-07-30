@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
     footer: {
-        height: 420,
+        height: 450,
         position: 'relative',
         backgroundColor:
             theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['800'],
@@ -26,6 +26,11 @@ export const useStyles = makeStyles((theme) => ({
                 theme.palette.type === 'dark'
                     ? theme.palette.common.white
                     : theme.palette.grey['800'],
+        },
+        [theme.breakpoints.down('xs')]: {
+            '&:before': {
+                display: 'none',
+            },
         },
     },
     logoText: {
@@ -87,12 +92,36 @@ export const useStyles = makeStyles((theme) => ({
         // border: `2px solid ${theme.palette.primary.main}`,
         boxShadow: theme.shadows[10],
     },
+    footerContainer: {
+        height: 450,
+        paddingTop: 150,
+        [theme.breakpoints.down('xs')]: {
+            paddingTop: 0,
+            //height: 600,
+        },
+    },
     copyright: {
         color:
             theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
     },
+    infoContainer: {
+        [theme.breakpoints.down('xs')]: {
+            height: 150,
+        },
+    },
+    logoContainer: {
+        [theme.breakpoints.down('xs')]: {
+            paddingTop: 0,
+            height: 150,
+            // marginTop: -155,
+        },
+    },
     socialIconContainer: {
-        height: 570,
+        [theme.breakpoints.down('xs')]: {
+            paddingTop: 0,
+            //marginTop: -170,
+            height: 150,
+        },
     },
     socialIcon: {
         color:
@@ -106,6 +135,7 @@ export const useStyles = makeStyles((theme) => ({
         color:
             theme.palette.type === 'dark' ? theme.palette.grey['800'] : theme.palette.common.white,
         marginBottom: theme.spacing(2),
+        // position: 'relative',
     },
     icon: {
         marginRight: theme.spacing(1),
