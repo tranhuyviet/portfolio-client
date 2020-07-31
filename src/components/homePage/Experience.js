@@ -23,12 +23,14 @@ const Experience = () => {
                             title="Haiphong Software Park (HSP) Viet Nam"
                             subtitle1="Web Developer"
                             subtitle2="HTML/CSS, Javascript, ASP.NET, SQLDB"
+                            link="http://hsp.com.vn/"
                         />
                         <TimelineItemRender
                             year="2004 - 2011"
                             title="Vietnam Maritime Communications and Electronic LLC (Vishipel)"
                             subtitle1="Project Manager"
                             subtitle2="Constructing and implementing a number of major projects of Vietnam's maritime industry: "
+                            link="https://vishipel.com.vn/Index.aspx"
                         >
                             <Typography variant="inherit">
                                 - Ship Registration Management
@@ -42,6 +44,7 @@ const Experience = () => {
                             starsIcon
                             title="The merit of the Ministry of Transport Vietnam"
                             subtitle2='"There have been many achievements in research and applied of science and technology for transportation from 2005 to 2010"'
+                            link="https://mt.gov.vn/en/Pages/default.aspx"
                         />
                     </Timeline>
                 </Grid>

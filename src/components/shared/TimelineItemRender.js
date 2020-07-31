@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography, Paper } from '@material-ui/core';
+import { Typography, Paper, Link } from '@material-ui/core';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
@@ -92,9 +92,11 @@ const TimelineItemRender = (props) => {
                 <Fade right>
                     <Paper style={{ padding: '8px 16px' }} elevation={3}>
                         <Typography className={classes.yearXS}>{props.year}</Typography>
-                        <Typography variant="h6" color="primary" className={classes.title}>
-                            {props.title}
-                        </Typography>
+                        <Link href={props.link} target="_blank" rel="noopener noreferrer">
+                            <Typography variant="h6" color="primary" className={classes.title}>
+                                {props.title}
+                            </Typography>
+                        </Link>
                         <Typography variant="subtitle1" className={classes.subtitle}>
                             {props.subtitle1}
                         </Typography>

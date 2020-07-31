@@ -14,6 +14,8 @@ export const useStyles = makeStyles((theme) => ({
         // zIndex: 100,
     },
     infoContainer: {
+        position: 'relative',
+        zIndex: 2,
         paddingRight: theme.spacing(5),
         [theme.breakpoints.down('sm')]: {
             paddingRight: theme.spacing(3),

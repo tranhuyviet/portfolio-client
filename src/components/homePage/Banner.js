@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStyles } from './Banner.style';
-import { Paper, Typography, Avatar, Button, Grid } from '@material-ui/core';
+import { Paper, Typography, Button, Grid, Link } from '@material-ui/core';
 import Particles from 'react-particles-js';
 import { useTheme } from '@material-ui/core/styles';
 import Typed from 'react-typed';
@@ -53,8 +53,15 @@ const Banner = () => {
                         // style={{ marginBottom: theme.spacing(3) }}
                         className={classes.description}
                     >
-                        I am currently a fourth year student at the Metropolia University of Applied
-                        Sciences. Although my major is Mobile Solution, I have a passion for the
+                        I am currently a fourth year student at the{' '}
+                        <Link
+                            href="https://www.metropolia.fi/en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Metropolia University of Applied Sciences
+                        </Link>
+                        . Although my major is Mobile Solution, I have a passion for the
                         web-devenopment.
                     </Typography>
                     <Typography variant="h6" className={classes.description}>

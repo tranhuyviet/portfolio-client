@@ -23,18 +23,21 @@ const Educations = () => {
                             title="Hanoi University of Science and Technology"
                             subtitle1="Major: Electronics and Telecommunication"
                             subtitle2="Graduated: Electronics and Telecommunications Engineer"
+                            link="https://en.hust.edu.vn/"
                         />
                         <TimelineItemRender
                             year="2004 - 2006"
-                            title="Le Quy Don Technical University"
+                            title="Military Technology Academy"
                             subtitle1="Major: Infomation Technology"
                             subtitle2="Graduated: Master of Technology"
+                            link="http://mta.edu.vn/"
                         />
                         <TimelineItemRender
                             year="2017"
                             title="Metropolia University of Applied Sciences"
                             subtitle1="Major: Mobile Solution"
                             subtitle2="Some of my following knowledge is in-school learning and self-study:"
+                            link="https://www.metropolia.fi/en"
                         >
                             <Typography variant="inherit">- Javascript (ES6)</Typography>
                             <Typography variant="inherit">
