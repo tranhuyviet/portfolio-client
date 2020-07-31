@@ -22,8 +22,9 @@ const Skills = () => {
                         <Box width="100%">
                             <LinearProgress
                                 variant="determinate"
+                                // className={classes.skillItemBar}
+                                style={{ height: 20 }}
                                 {...props}
-                                className={classes.skillItemBar}
                             />
                         </Box>
                         <Box minWidth={35}>
@@ -48,7 +49,12 @@ const Skills = () => {
             style={{ marginTop: theme.spacing(5) }}
         >
             <SectionTitle title="Skills" />
-            <Grid container spacing={1}>
+            <Grid
+                container
+                spacing={1}
+                style={{ width: '90%', margin: '0 auto' }}
+                className={classes.gridContainer}
+            >
                 <Grid item sm={6} container direction="column" justify="center" alignItems="center">
                     <Grid item container justify="center">
                         <Spin forever>

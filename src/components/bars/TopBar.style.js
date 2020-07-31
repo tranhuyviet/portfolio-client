@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme) => ({
     topbarContainer: {
         maxHeight: 40,
-        padding: '8px 16px',
+        padding: '8px 0',
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',

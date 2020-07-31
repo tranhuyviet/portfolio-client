@@ -5,13 +5,13 @@ import {
     FormControlLabel,
     Tooltip,
     Paper,
-    Button,
+    // Button,
     Divider,
     IconButton,
 } from '@material-ui/core';
 import { useStyles } from './TopBar.style';
 
-import PersonIcon from '@material-ui/icons/Person';
+// import PersonIcon from '@material-ui/icons/Person';
 import ColorLensIcon from '@material-ui/icons/ColorLens';
 // import TranslateIcon from '@material-ui/icons/Translate';
 // import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -105,14 +105,14 @@ const TopBar = ({
                     <MenuItem onClick={menuLanguageItemClick}>Suomi</MenuItem>
                 </Menu>
             </Box> */}
-            <Divider orientation="vertical" flexItem color="inherit" className={classes.divider} />
+            {/* <Divider orientation="vertical" flexItem color="inherit" className={classes.divider} />
             <Box className={classes.login}>
                 <Tooltip title="Login" arrow>
                     <Button startIcon={<PersonIcon />} className={classes.button} color="inherit">
                         Login
                     </Button>
                 </Tooltip>
-            </Box>
+            </Box> */}
         </Paper>
     );
 };

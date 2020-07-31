@@ -49,12 +49,16 @@ const Footer = () => {
                     className={classes.logoContainer}
                 >
                     <Pulse forever>
-                        <>
+                        <Grid
+                            container
+                            justify="center"
+                            alignItems="center"
+                            className={classes.logoBackground}
+                        >
                             <Typography variant="h2" className={classes.logoText}>
                                 Viet
                             </Typography>
-                            <div className={classes.logoBackground} />
-                        </>
+                        </Grid>
                     </Pulse>
                 </Grid>
                 <Grid

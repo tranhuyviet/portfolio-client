@@ -21,12 +21,17 @@ const Banner = () => {
                     alignItems="center"
                     // style={{ paddingRight: theme.spacing(4) }}
                 >
-                    <Avatar
+                    {/* <Avatar
                         // src="https://res.cloudinary.com/dzaxf70c4/image/upload/ar_1:1,bo_5px_solid_rgb:f39a1d,c_fill,g_auto,r_max,w_1000/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
                         // src="https://res.cloudinary.com/dzaxf70c4/image/upload/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
                         src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600,w_500/v1595245143/bg_home_mtij02.png"
                         alt="avatar"
                         variant="square"
+                        className={classes.avatar}
+                    /> */}
+                    <img
+                        src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600,w_500/v1595245143/bg_home_mtij02.png"
+                        alt="avatar"
                         className={classes.avatar}
                     />
                 </Grid>
