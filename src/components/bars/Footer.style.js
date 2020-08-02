@@ -35,25 +35,28 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
     logoText: {
-        fontFamily: 'Dr Sugiyama',
+        // fontFamily: 'Dr Sugiyama',
+        // fontFamily: 'Paytone One',
+        fontFamily: 'Saira Stencil One',
         fontWeight: 'bold',
-        letterSpacing: '4px',
+        textDecoration: 'underline',
+        letterSpacing: '1px',
         padding: '5px 0',
 
         fontSize: '64px',
         // color: '#F39A1D',
-        backgroundImage: `linear-gradient(-10deg, ${theme.palette.primary.main} 0%,${
+        backgroundImage: `linear-gradient(0deg, ${theme.palette.primary.main} 0%,${
             theme.palette.primary.main
         } 40%, ${
-            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
+            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['700']
         } 55%,${
-            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
+            theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['700']
         }  58%,${theme.palette.primary.main} 75%,${theme.palette.primary.main} 100%)`,
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         color: 'transparent',
         position: 'absolute',
-        top: 26,
+        top: 25,
         height: 140,
         width: 140,
         textAlign: 'center',

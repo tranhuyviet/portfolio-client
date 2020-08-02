@@ -64,7 +64,7 @@ const NavBar = () => {
                     style={{ position: 'relative' }}
                 >
                     <Typography variant="h2" className={classes.logoText}>
-                        Viet
+                        VT
                     </Typography>
                     {/* <div className={classes.logoBackground}></div> */}
                 </Grid>

@@ -56,7 +56,7 @@ const Footer = () => {
                             className={classes.logoBackground}
                         >
                             <Typography variant="h2" className={classes.logoText}>
-                                Viet
+                                VT
                             </Typography>
                         </Grid>
                     </Pulse>

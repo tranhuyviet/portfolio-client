@@ -29,7 +29,7 @@ const ContactForm = () => {
         errors,
         // setErrors,
         // isValid,
-        // setValues,
+        setValues,
         // touched,
         setFieldValue,
     } = useFormik({
@@ -42,7 +42,7 @@ const ContactForm = () => {
         console.log('submit...', values, errors);
         if (Object.keys(errors).length === 0) {
             setAlertSuccessOpen(true);
-            values = initialValues;
+            setValues(initialValues);
         }
     }
 
@@ -60,7 +60,7 @@ const ContactForm = () => {
                     fullWidth
                     value={values.name}
                     onChange={handleChange}
-                    onBlur={handleBlur}
+                    // onBlur={handleBlur}
                     helperText={errors.name}
                     style={{ marginBottom: theme.spacing(2) }}
                 />
@@ -75,7 +75,7 @@ const ContactForm = () => {
                     fullWidth
                     value={values.email}
                     onChange={handleChange}
-                    onBlur={handleBlur}
+                    // onBlur={handleBlur}
                     helperText={errors.email}
                     style={{ marginBottom: theme.spacing(2) }}
                 />
@@ -92,7 +92,7 @@ const ContactForm = () => {
                     fullWidth
                     value={values.message}
                     onChange={handleChange}
-                    onBlur={handleBlur}
+                    // onBlur={handleBlur}
                     helperText={errors.message}
                     style={{ marginBottom: theme.spacing(2) }}
                 />

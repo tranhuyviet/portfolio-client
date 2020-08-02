@@ -14,14 +14,16 @@ export const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     logoText: {
-        fontFamily: 'Dr Sugiyama',
+        // fontFamily: 'Dr Sugiyama',
+        // fontFamily: 'Paytone One',
+        fontFamily: 'Saira Stencil One',
         fontWeight: 'bold',
-        letterSpacing: '4px',
+        letterSpacing: '1px',
         padding: '5px 0',
 
         fontSize: '46px',
         // color: '#F39A1D',
-        backgroundImage: `linear-gradient(-10deg, ${theme.palette.primary.main} 0%,${
+        backgroundImage: `linear-gradient(0deg, ${theme.palette.primary.main} 0%,${
             theme.palette.primary.main
         } 40%, ${
             theme.palette.type === 'dark' ? theme.palette.common.white : theme.palette.grey['600']
