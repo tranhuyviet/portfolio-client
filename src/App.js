@@ -60,7 +60,7 @@ function App() {
         setIsDarkTheme((isDarkTheme) => !isDarkTheme);
     };
 
-    console.log(theme);
+    // console.log(theme);
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>

@@ -33,7 +33,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         height: 600,
-        width: 500,
+        width: 502,
         [theme.breakpoints.down('sm')]: {
             height: 400,
             width: 333,

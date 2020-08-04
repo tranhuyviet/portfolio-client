@@ -4,6 +4,7 @@ import { Paper, Typography, Button, Grid, Link } from '@material-ui/core';
 import Particles from 'react-particles-js';
 import { useTheme } from '@material-ui/core/styles';
 import Typed from 'react-typed';
+import CV from '../../assets/VietTran_CV.pdf';
 
 const Banner = () => {
     const classes = useStyles();
@@ -21,16 +22,8 @@ const Banner = () => {
                     alignItems="center"
                     // style={{ paddingRight: theme.spacing(4) }}
                 >
-                    {/* <Avatar
-                        // src="https://res.cloudinary.com/dzaxf70c4/image/upload/ar_1:1,bo_5px_solid_rgb:f39a1d,c_fill,g_auto,r_max,w_1000/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
-                        // src="https://res.cloudinary.com/dzaxf70c4/image/upload/v1592381151/jqoyecsjkjtxxshaxhqt.jpg"
-                        src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600,w_500/v1595245143/bg_home_mtij02.png"
-                        alt="avatar"
-                        variant="square"
-                        className={classes.avatar}
-                    /> */}
                     <img
-                        src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600,w_500/v1595245143/bg_home_mtij02.png"
+                        src="https://res.cloudinary.com/dzaxf70c4/image/upload/c_scale,h_600/v1596549722/a_viet_1_1_swgra3.png"
                         alt="avatar"
                         className={classes.avatar}
                     />
@@ -46,7 +39,7 @@ const Banner = () => {
                         //style={{ textDecoration: 'underline', //marginBottom: theme.spacing(3) }}
                         className={classes.subtitle}
                     >
-                        <Typed strings={['Full-Stack Web Diveloper']} typeSpeed={60} loop />
+                        <Typed strings={['Full-Stack Web Developer']} typeSpeed={40} loop />
                     </Typography>
                     <Typography
                         variant="h6"
@@ -68,13 +61,20 @@ const Banner = () => {
                         I have over 10 years of experience working in the information technology
                         environment in Vietnam.
                     </Typography>
-                    <Button
-                        variant="outlined"
-                        style={{ fontWeight: 'bold', letterSpacing: 1 }}
-                        color="primary"
+                    <a
+                        href={CV}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: 'none' }}
                     >
-                        Download CV
-                    </Button>
+                        <Button
+                            variant="outlined"
+                            style={{ fontWeight: 'bold', letterSpacing: 1 }}
+                            color="primary"
+                        >
+                            Download CV
+                        </Button>
+                    </a>
                 </Grid>
             </Grid>
             <Particles

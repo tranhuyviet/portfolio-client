@@ -13,7 +13,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import { useFormik } from 'formik';
 import { useTheme } from '@material-ui/core/styles';
 import { contactSchema } from '../../schemas';
-import { useHistory } from 'react-router-dom';
+
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import { useMutation } from '@apollo/react-hooks';
@@ -27,7 +27,7 @@ function Alert(props) {
 
 const ContactForm = () => {
     const theme = useTheme();
-    const history = useHistory();
+
     const [alertSuccessOpen, setAlertSuccessOpen] = useState(false);
 
     const initialValues = {

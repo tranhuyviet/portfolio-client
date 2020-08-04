@@ -28,7 +28,7 @@ const Educations = () => {
                         <TimelineItemRender
                             year="2004 - 2006"
                             title="Military Technology Academy"
-                            subtitle1="Major: Infomation Technology"
+                            subtitle1="Major: Information Technology"
                             subtitle2="Graduated: Master of Technology"
                             link="http://mta.edu.vn/"
                         />
