@@ -1,10 +1,25 @@
 import React, { useState } from 'react';
-import { Paper, TextField, Button, Grid, Snackbar } from '@material-ui/core';
+import {
+    Paper,
+    TextField,
+    Button,
+    Grid,
+    Snackbar,
+    CircularProgress,
+    // Typography,
+    // Backdrop,
+} from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import { useFormik } from 'formik';
 import { useTheme } from '@material-ui/core/styles';
 import { contactSchema } from '../../schemas';
+import { useHistory } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
+
+import { useMutation } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+
+import errorParse from '../../utils/errorParse';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -12,6 +27,7 @@ function Alert(props) {
 
 const ContactForm = () => {
     const theme = useTheme();
+    const history = useHistory();
     const [alertSuccessOpen, setAlertSuccessOpen] = useState(false);
 
     const initialValues = {
@@ -27,27 +43,52 @@ const ContactForm = () => {
         handleSubmit,
         handleBlur,
         errors,
-        // setErrors,
+        setErrors,
         // isValid,
         setValues,
         // touched,
         setFieldValue,
+        // resetForm,
     } = useFormik({
         initialValues,
         onSubmit,
         validationSchema: contactSchema,
     });
 
-    function onSubmit(values) {
-        console.log('submit...', values, errors);
+    const [createContact, { loading }] = useMutation(CREATE_CONTACT, {
+        variables: values,
+        onError(error) {
+            // console.log('ERROR CLIENT', error.graphQLErrors[0]);
+            // console.log('ERRRRR', error);
+            setErrors(errorParse(error));
+        },
+        update(proxy, result) {
+            // console.log('RESULT', result);
+            if (result.data.createContact === 'create contact success') {
+                setAlertSuccessOpen(true);
+                setValues(initialValues);
+                // resetForm();
+                // history.push('/contact');
+            }
+        },
+    });
+
+    function onSubmit() {
+        // console.log('submit...', values, errors);
         if (Object.keys(errors).length === 0) {
-            setAlertSuccessOpen(true);
-            setValues(initialValues);
+            createContact();
         }
     }
 
     return (
-        <Paper style={{ padding: theme.spacing(2), maxWidth: 700 }} elevation={3}>
+        <Paper
+            style={{ padding: theme.spacing(2), maxWidth: 700, textAlign: 'center' }}
+            elevation={3}
+        >
+            {loading && (
+                <CircularProgress color="primary" style={{ marginBottom: theme.spacing(2) }} />
+            )}
+
             <form noValidate onSubmit={handleSubmit}>
                 <TextField
                     type="text"
@@ -60,7 +101,7 @@ const ContactForm = () => {
                     fullWidth
                     value={values.name}
                     onChange={handleChange}
-                    // onBlur={handleBlur}
+                    onBlur={handleBlur}
                     helperText={errors.name}
                     style={{ marginBottom: theme.spacing(2) }}
                 />
@@ -75,7 +116,7 @@ const ContactForm = () => {
                     fullWidth
                     value={values.email}
                     onChange={handleChange}
-                    // onBlur={handleBlur}
+                    onBlur={handleBlur}
                     helperText={errors.email}
                     style={{ marginBottom: theme.spacing(2) }}
                 />
@@ -92,7 +133,7 @@ const ContactForm = () => {
                     fullWidth
                     value={values.message}
                     onChange={handleChange}
-                    // onBlur={handleBlur}
+                    onBlur={handleBlur}
                     helperText={errors.message}
                     style={{ marginBottom: theme.spacing(2) }}
                 />
@@ -117,7 +158,14 @@ const ContactForm = () => {
                             onChange={(value) => setFieldValue('recaptcha', value)}
                         />
                         {errors.recaptcha && (
-                            <p style={{ color: '#f44336', fontSize: '12px', marginLeft: '14px' }}>
+                            <p
+                                style={{
+                                    color: '#f44336',
+                                    fontSize: '12px',
+                                    marginLeft: '14px',
+                                    textAlign: 'left',
+                                }}
+                            >
                                 {errors.recaptcha}
                             </p>
                         )}
@@ -133,6 +181,7 @@ const ContactForm = () => {
                             letterSpacing: 1,
                         }}
                         fullWidth
+                        autoFocus
                     >
                         Send
                     </Button>
@@ -144,12 +193,23 @@ const ContactForm = () => {
                     onClose={() => setAlertSuccessOpen(false)}
                 >
                     <Alert onClose={() => setAlertSuccessOpen(false)} severity="success">
-                        Thanks for your message. I will reply to you as soon as possible.
+                        Send message successfully. Thank you.
                     </Alert>
                 </Snackbar>
             </form>
         </Paper>
     );
 };
+
+const CREATE_CONTACT = gql`
+    mutation createContact(
+        $name: String!
+        $email: String!
+        $message: String!
+        $recaptcha: String!
+    ) {
+        createContact(name: $name, email: $email, message: $message, recaptcha: $recaptcha)
+    }
+`;
 
 export default ContactForm;
