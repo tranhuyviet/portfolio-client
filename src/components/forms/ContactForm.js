@@ -52,8 +52,12 @@ const ContactForm = () => {
     } = useFormik({
         initialValues,
         onSubmit,
+        validateOnChange: false,
+        validateOnBlur: false,
         validationSchema: contactSchema,
     });
+
+    const [alertErrorsOpen, setAlertErrorsOpen] = useState(false);
 
     const [createContact, { loading }] = useMutation(CREATE_CONTACT, {
         variables: values,
@@ -88,6 +92,8 @@ const ContactForm = () => {
             {loading && (
                 <CircularProgress color="primary" style={{ marginBottom: theme.spacing(2) }} />
             )}
+
+            {/* {errors.global && <h1>{errors.global}</h1>} */}
 
             <form noValidate onSubmit={handleSubmit}>
                 <TextField
@@ -186,7 +192,7 @@ const ContactForm = () => {
                         Send
                     </Button>
                 </Grid>
-                {/* </div> */}
+
                 <Snackbar
                     open={alertSuccessOpen}
                     autoHideDuration={6000}
@@ -196,6 +202,27 @@ const ContactForm = () => {
                         Send message successfully. Thank you.
                     </Alert>
                 </Snackbar>
+
+                {errors.global && (
+                    <Snackbar
+                        open={!!errors.global || alertErrorsOpen}
+                        autoHideDuration={6000}
+                        onClose={() => {
+                            errors.global = null;
+                            setAlertErrorsOpen(false);
+                        }}
+                    >
+                        <Alert
+                            // onClose={() => {
+                            //     errors.global = null;
+                            //     setAlertErrorsOpen(false);
+                            // }}
+                            severity="error"
+                        >
+                            {errors.global}
+                        </Alert>
+                    </Snackbar>
+                )}
             </form>
         </Paper>
     );

@@ -6,7 +6,8 @@ import { createHttpLink } from 'apollo-link-http';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:5000/graphql',
+    // uri: 'http://localhost:5000/graphql',
+    uri: 'https://viet-portfolio-server.herokuapp.com/graphql',
 });
 
 const client = new ApolloClient({
