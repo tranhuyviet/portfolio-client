@@ -41,7 +41,8 @@ const Educations = () => {
                         >
                             <Typography variant="inherit">- Javascript (ES6)</Typography>
                             <Typography variant="inherit">
-                                - React: Redux, React Hooks (Custom Hooks, Context API,...)
+                                - React: Redux, React Hooks (Custom Hooks, Context API,...),
+                                Cloudinary
                             </Typography>
                             <Typography variant="inherit">
                                 - UI Frameworks: Material UI, Semantic
