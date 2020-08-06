@@ -26,23 +26,14 @@ const Footer = () => {
                     direction="column"
                     className={classes.infoContainer}
                 >
-                    <Grid
-                        item
-                        container
-                        direction="column"
-                        justify="center"
-                        alignItems="center"
-                        className={classes.infoWrap}
-                    >
-                        <Typography variant="subtitle1" className={classes.info}>
-                            <PhoneIcon color="primary" fontSize="large" className={classes.icon} />
-                            +358 45 105 3344
-                        </Typography>
-                        <Typography variant="subtitle1" className={classes.info}>
-                            <EmailIcon color="primary" fontSize="large" className={classes.icon} />
-                            viet@viet.fi
-                        </Typography>
-                    </Grid>
+                    <Typography variant="subtitle1" className={classes.info}>
+                        <PhoneIcon color="primary" fontSize="large" className={classes.icon} />
+                        +358 45 105 3344
+                    </Typography>
+                    <Typography variant="subtitle1" className={classes.info}>
+                        <EmailIcon color="primary" fontSize="large" className={classes.icon} />
+                        viet@viet.fi
+                    </Typography>
                 </Grid>
                 <Grid
                     item
