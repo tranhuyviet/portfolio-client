@@ -75,7 +75,7 @@ const NavBar = () => {
                     </Typography>
                     <Typography variant="subtitle1" className={classes.info}>
                         <EmailIcon color="primary" fontSize="large" className={classes.icon} />
-                        vietth@msn.com
+                        viet@viet.fi
                     </Typography>
                 </Grid>
             </Grid>

@@ -26,18 +26,23 @@ const Footer = () => {
                     direction="column"
                     className={classes.infoContainer}
                 >
-                    <Typography variant="subtitle1" className={classes.info}>
-                        <PhoneIcon color="primary" fontSize="large" className={classes.icon} />
-                        +358 45 105 3344
-                    </Typography>
-                    <Typography variant="subtitle1" className={classes.info}>
-                        <EmailIcon color="primary" fontSize="large" className={classes.icon} />
-                        vietth@msn.com
-                    </Typography>
-                    {/* <Typography
-                        variant="subtitle1"
-                        className={classes.copyright}
-                    >{`© ${new Date().getFullYear()} Viet Tran.`}</Typography> */}
+                    <Grid
+                        item
+                        container
+                        direction="column"
+                        justify="center"
+                        alignItems="center"
+                        className={classes.infoWrap}
+                    >
+                        <Typography variant="subtitle1" className={classes.info}>
+                            <PhoneIcon color="primary" fontSize="large" className={classes.icon} />
+                            +358 45 105 3344
+                        </Typography>
+                        <Typography variant="subtitle1" className={classes.info}>
+                            <EmailIcon color="primary" fontSize="large" className={classes.icon} />
+                            viet@viet.fi
+                        </Typography>
+                    </Grid>
                 </Grid>
                 <Grid
                     item
